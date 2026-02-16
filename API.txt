@@ -1,0 +1,90 @@
+API 
+----
+Application Programming Interface
+It allows two applications to communicate.
+
+Types of APIs
+REST API (most common)
+SOAP
+GraphQL
+
+✅ HTTP Basics
+Methods: 
+GET(Read) 
+POST(create) 
+PUT(update) 
+DELETE
+
+Status codes:
+200 → Success
+404 → Not Found
+500 → Server Error
+
+✅ JSON
+Data format used in APIs
+{
+  "name": "Vaishnavi",
+  "role": "Backend Developer"
+}
+
+✅ Tools
+Postman (API testing)
+Browser DevTools
+curl
+
+
+
+REST API --> Representational State Transfer
+-------
+REST (Representational State Transfer) is a way to build APIs using HTTP methods to perform operations on resources.
+or
+“REST API is an architectural style that uses HTTP methods to perform CRUD operations on resources in a stateless manner.”
+
+It allows frontend and backend to communicate using standard HTTP methods.
+
+🔹 Key Concepts of REST API
+
+1️⃣ Resource
+
+Everything is treated as a resource.
+Example:
+/users
+/products
+/orders
+
+2️⃣ HTTP Methods (CRUD Operations)
+
+Method	Work	Example
+
+GET	Read data	GET /users
+POST	Create data	POST /users
+PUT	Update data	PUT /users/1
+DELETE	Delete data	DELETE /users/1
+
+
+3️⃣ Status Codes
+200 → Success
+201 → Created
+400 → Bad Request
+401 → Unauthorized
+404 → Not Found
+500 → Server Error
+
+4️⃣ Stateless
+
+REST API does NOT store client session data.
+Each request must contain all required information.
+
+Example (Node.js + Express)
+app.get('/users', (req, res) => {
+   res.json({ message: "All users" });
+});
+
+
+🔹 REST Principles
+
+Client–Server architecture
+Stateless
+Cacheable
+Uniform Interface
+Layered system
